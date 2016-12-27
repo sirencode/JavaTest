@@ -16,8 +16,10 @@ public class FactionRankNum {
         }
         if (num <= FIRST_STEP) {
             return String.valueOf(num);
-        } else {
+        } else if (num <= 500){
             return buffer.append((int)(Math.ceil(num / HUAND) * HUAND)).toString();
+        } else {
+            return "大于500";
         }
     }
 }
